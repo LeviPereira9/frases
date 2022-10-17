@@ -1,32 +1,6 @@
-import { useEffect, useState } from "react";
 import AuthorTemplate from "../../components/AuthorTemplate";
-import { useFetchPhrases } from "../../hooks/useFetchPhrases";
 
 const Maquiavel = () => {
-    const author = "nikolas+tesla"
-
-    const { data, loading, error } = useFetchPhrases(author);
-    const [phrases, setPhrases] = useState(null);
-    const [randomNumber, setRandomNumber] = useState(0)
-
-     useEffect(()=>{
-
-        if( data === null ){
-            return;
-        } else {
-            setPhrases(data.frases);
-            if(phrases === null){
-                return;
-            } else {
-                console.log(phrases)
-            }
-        };
-        
-    },[data])
-    
-    const handleRandomText = ()=>{
-        setRandomNumber(Math.round(Math.random()*49))
-    }
     
   return (
 
