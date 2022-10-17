@@ -12,6 +12,7 @@ import Home from './pages/Home';
 import Recommendation from './pages/Recommendation';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
+import TestePage from './pages/TestePage';
 
 //Authors
 import Maquiavel from "./pages/authors/Maquiavel"
@@ -34,6 +35,7 @@ const App = () => {
           <Route path="/recommendation" element={<Recommendation/>}/>
           <Route path="/aboutus" element={<AboutUs/>}/>
           <Route path="/contactus" element={<ContactUs/>}/>
+          <Route path="/teste" element={<TestePage/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>
