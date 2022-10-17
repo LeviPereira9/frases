@@ -1,0 +1,43 @@
+@import "./responsive";
+
+%phrase-backgroud-image{
+    background-size: cover;
+    background-position: center;
+
+}
+
+%author-background-image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        height: 900px;
+        background-size: cover;
+        background-position: bottom;
+        transition: .4s;
+        filter: grayscale(.8);
+        
+
+        @include tableTop{
+            height: 800px;
+        }
+
+        @include tablet{
+            width: 100%;
+            height: 650px;
+            background-position: top center;
+        }
+
+        
+        @include mobile {
+            width: 100%;
+            height: 500px;
+        }
+
+        
+        
+        &:hover{
+            filter: grayscale(0);
+            box-shadow: px 0px 10px black ;
+        }
+}

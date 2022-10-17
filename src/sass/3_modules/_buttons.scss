@@ -1,0 +1,39 @@
+@use "../1_base/variables";
+@import "../3_modules/responsive";
+
+%primary-button{
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        font-weight: bold;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        width: 245px;
+        padding: 10px 0px;
+        border-radius: 10px;
+        text-shadow: 1px 0px 1px rgba(0, 0, 0, 1);
+        cursor: pointer;
+        transition: .2s;
+
+        
+
+        @include desktop{
+            width: 350px;
+            font-size: 2em;
+        }
+
+        @include tableTop{
+            width: 150px;
+            font-size: 1em;
+        }
+        
+        @include mobile{
+            font-size: 1em;
+        }
+
+        &:hover{
+            background-color: variables.$primary-color;
+            color: white;
+            border: 1px solid variables.$primary-bgColor;
+        }
+}

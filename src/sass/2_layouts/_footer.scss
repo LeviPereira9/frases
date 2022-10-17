@@ -1,0 +1,42 @@
+@use '../1_base/variables';
+@import "../3_modules/modules.scss";
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: variables.$primary-bgColor;
+    color: white;;
+    font-size: 1.5em;
+    height: 135px;
+    text-align: center;
+
+    @include tableTop{
+        font-size: 1.2em;
+    }
+    
+    @include tablet{
+        font-size: 1.2em;
+    }
+    
+    @include mobile{
+        font-size: 1em;
+    }
+
+    &__midias{
+        display: flex;
+        column-gap: 25px;
+        margin-top: 25px;
+
+        a{
+            color: white;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+        
+    }
+    
+}

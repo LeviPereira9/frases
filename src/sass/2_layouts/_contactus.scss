@@ -1,0 +1,95 @@
+@use "../1_base/variables";
+@import "../3_modules/modules.scss";
+
+.contactUs{
+    background-color: variables.$secondary-bgColor;
+    height: 800px;
+    margin: auto;
+    color: variables.$primary-bgColor;
+    display: flex;
+    justify-content: center;
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    &__text{
+        width: 1200px;
+        font-size: 1.8em;
+        font-style: italic;
+        margin: 50px 0;
+
+        @include tableTop{
+            width: 900px;
+        }
+        
+        @include tablet{
+            width: 540px;
+            font-size: 1.65em;
+        }
+
+        @include mobile{
+            width: 340px;
+            font-size: 1.7em;
+        }
+    }
+
+    &__links{
+        font-size: 1.7em;
+
+        @include tableTop{
+            font-size: 1.65em;
+        }
+
+        @include tablet{
+            font-size: 1.5em;
+        }
+
+        @include mobile{
+            font-size: 1.2em;
+        }
+        li{
+            margin-bottom: 50px;
+        }
+        
+        svg{
+            margin-right: 10px;
+        }
+        
+        a{
+            color: variables.$primary-bgColor;
+
+            &:hover{
+                text-decoration: underline;
+            }
+
+        }
+    }   
+    
+    &__randomImg{
+        width: 700px;
+        margin: auto;
+
+        @include tableTop{
+            width: 650px;
+        }
+        
+        @include tablet{
+            margin-top: 40px;
+            width: 500px;
+        }
+
+        @include mobile{
+            margin-top: 50px;
+            width: 300px;
+        }
+        
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        
+    }
+    
+}

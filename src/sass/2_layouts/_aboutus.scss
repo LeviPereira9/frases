@@ -1,0 +1,53 @@
+@use "../1_base/variables";
+@import "../3_modules/modules.scss";
+
+.aboutUs{
+    display: flex;
+    justify-content: center;
+    background-color: variables.$secondary-bgColor;
+    color: variables.$primary-bgColor;
+
+    &__container{
+        width: 980px;
+        margin: 50px 0;
+        font-size: 1.2em;
+        
+        @include tableTop{
+            width: 900px;
+            margin-top: 10px;
+        }
+        
+        @include tablet{
+            width: 530px;
+            margin-top: 15px;
+            font-size: 1.1em;
+        }
+        
+        @include mobile{
+            width: 350px;
+            font-size: 1.05em;
+            margin-top: 35px;
+        }
+
+        &__title{
+            text-align: center;
+            margin: 25px 0;
+
+            @include mobile{
+                margin-top: 0;
+            }
+        }
+
+        &__text{
+            margin-bottom: 25px;
+            text-indent: 1.5em;
+            line-height: 1.7em;
+            text-align: justify;
+
+            p{
+                box-sizing: border-box;
+                margin-bottom: 25px;
+            }
+        }
+    }
+}

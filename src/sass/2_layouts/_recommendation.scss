@@ -1,0 +1,206 @@
+@use "../1_base/variables";
+@import "../3_modules/modules.scss";
+
+.recommendation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 800px;
+    padding-top: 25px;
+    background-color: variables.$secondary-bgColor;
+    color: variables.$primary-bgColor;
+    
+    &__form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+        background-color: variables.$secondary-color;
+        border: 1px solid black;
+        width: 700px;
+        height: 620px;
+        border-radius: 25px;
+        
+        @include tablet{
+            width: 550px;
+        }
+        
+        @include mobile{
+            width: 380px;
+            align-items: flex-start;
+        }
+        
+        &__title{
+            text-align: center;
+            padding-top: 15px;
+        }
+
+        label{
+            font-weight: bold;
+            font-size: 1.2em;
+
+            @include tablet{
+                font-size: 1.3em;
+            }
+            
+            @include mobile{
+                padding-left: 15px;
+            }
+        }
+        
+        input[type=email]{
+            cursor: not-allowed;
+
+            &:disabled{
+                background-color: transparent;
+            }
+
+        }
+
+        input[type=text], input[type=email]{
+            width: 500px;
+            height: 30px;
+            margin-left: 10px;
+            margin-top: 15px;
+            border: none;
+            border-bottom: 1px solid black;
+            font-size: 1.2em;
+            padding-left: 10px;
+            padding-bottom: 5px;
+            background-color: transparent;
+
+            @include tablet{
+                width: 420px;
+            }
+            
+            @include mobile{
+                width: 250px;
+                padding-left: 5px;
+                margin-left: 5px;
+                font-size: 1em;
+            }
+            
+            &:focus{
+                outline: none;
+            }
+            
+            &::placeholder{
+                color: #363636;
+                font-style: italic;
+                padding-left: 5px;
+            }
+        }
+
+        &__authors{
+            width: 585px;
+            height: 225px;
+
+            @include tablet{
+                width: 510px;
+
+                label{
+                    font-size: 1.2em;
+                }
+            }
+            
+            @include mobile{
+                width: 320px;
+                text-align: start;
+                margin-left: 15px;
+
+                label{
+                    margin-left: -20px;
+                }
+            }
+            
+            legend{
+                font-weight: bold;
+                font-size: 1.2em;
+                
+                @include tablet{
+                    font-size: 1.3em;
+                }
+            }
+
+            &__choice{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin: 5px 15px;
+
+                span{
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        &__buttonActived {
+            @extend %primary-button;
+            color: variables.$primary-bgColor;
+            border-color: variables.$primary-bgColor;
+
+            @include mobile{
+                margin: auto;
+            }
+        }
+
+        &__buttonDesactived{
+            @extend %primary-button;
+            background-color: lightgreen;
+            color: darkgreen;
+            border-color: darkgreen;
+            cursor: not-allowed;
+
+            @include mobile{
+                margin: auto;
+            }
+
+            &:hover{
+                background-color: darkgreen;
+                color: lightgreen;
+                border-color: lightgreen;
+            }
+
+        }
+
+
+
+        
+    }
+
+    &__voted{
+        background-color: #DDF4F8;
+        padding: 15px 25px;
+        border: 1px solid black;
+        border-radius: 15px;
+        
+        &__message{
+            background-color: #EEFAFC;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            line-height: 2em;
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 450px;
+            padding: 15px 25px;
+        }
+
+        &__change{
+            text-align: center;
+            margin-top: 25px;
+            font-size: 1.2em;
+            font-style: oblique;
+
+            button{
+                @extend %primary-button;
+                margin-top: 15px;
+                background-color: variables.$primary-bgColor;
+                width: 175px;
+                border: 1px solid black;
+                font-size: 0.95em;
+            }
+        }
+        
+    }
+}

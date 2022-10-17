@@ -1,0 +1,214 @@
+@use "../1_base/variables";
+@import "../3_modules/modules.scss";
+
+
+
+.backgroundMaquiavel{
+    background-image: url("/img/maquiavel_background.jpg");
+}
+
+.backgroundTesla{
+    background-image: url("/img/NikaTesla_background.jpg");
+}
+
+.backgroundNietzche{
+    background-image: url("/img/nietzsche_background1.jpg");
+}
+
+.backgroundReneDescartes{
+    background-image: url("/img/reneDescartes_background.jpg");
+}
+
+.backgroundMaquiavel, 
+.backgroundTesla, 
+.backgroundNietzche, 
+.backgroundReneDescartes {
+    @extend %phrase-backgroud-image;
+}
+
+.authorPhrase{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1200px;
+
+    @include desktop {
+        height: 2000px;
+    }
+    
+    @include tablet{
+        height: 1500px;
+    }
+
+    @include mobile{
+        height: 1500px;
+    }
+
+    
+    &__info{
+        margin-top: 15px;
+        border-radius: 15px;
+        background-color: rgba(0, 0, 0, 0.65);
+        width: 550px;
+        height: 500px;
+        text-align: center;
+
+        @include desktop{
+            height: 800px;
+            width: 950px;
+        }
+        
+        @include tablet{
+            height: 570px;
+            width: 525px;
+        }
+
+        @include mobile{
+            width: 380px;
+            height: 600px;
+        }
+
+        &__perfil{
+            border: 1px solid black;
+            margin-top: 10px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+
+            @include desktop{
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        &__title{
+            margin-top: 5px;
+            text-transform: uppercase;
+            color: white;
+
+            @include desktop{
+                font-size: 2.3em;
+            }
+        }
+
+        &__text{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 8px;
+            padding: 0px 20px;
+            color: white;
+            line-height: 1.9em;
+            text-indent: 1.2em;
+            font-size: 1.05em;
+            height: 270px;
+            
+            p{
+                text-align: justify;
+                margin-bottom: 5px;
+            }
+            
+            @include desktop{
+                height: 500px;
+                font-size: 2em;
+                padding: 0px 50px;
+            }
+            
+            @include tablet{
+                font-size: 1.2em;
+            }
+
+            @include mobile{
+                font-size: 1em;
+            }
+
+        }
+    }
+
+    &__phrase{
+        margin-top: 60px;
+        width: 1000px;
+        height: 510px;
+        background-color: rgba(0, 0, 0, 0.65);
+        border-radius: 15px;
+
+        @include desktop{
+            width: 1500px;
+            height: 750px;
+        }
+        
+        @include tableTop{
+            width: 650px;
+        }
+        
+        @include tablet{
+            width: 525px;
+        }
+
+        @include mobile{
+            width: 380px;
+        }
+
+        
+        &__title{
+            color: white;
+            font-size: 1.8em;
+            text-align: center;
+            border-bottom: 1px solid white;
+            padding: 15px 0;
+
+            @include desktop{
+                font-size: 2.3em;
+            }
+            
+            @include mobile{
+                font-size: 1.5em;
+            }
+        }
+        
+        &__text{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.6em;
+            margin-top: 15px;
+            padding: 0px 25px;
+            height: 320px;
+            text-align: center;
+
+            @include desktop{
+                height: 500px;
+                font-size: 2em;
+            }
+            
+            @include mobile{
+                height: 300px;
+                font-size: 1.2em;
+            }
+        }
+
+        &__authorName{
+            text-align: right;
+            font-style: italic;
+            color: white;
+            font-size: 1.2em;
+            padding: 0px 50px;
+
+            @include desktop{
+                font-size: 1.7em;
+            }
+        }
+        
+        &__button{
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+
+            button {
+                @extend %primary-button;
+            }
+        }
+    }
+}
