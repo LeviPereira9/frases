@@ -4,12 +4,19 @@
 .author {
     display: flex;
 
+
+    @include iTablet{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
     
     @include tablet{
+        display: flex;
         flex-direction: column
     }
     
     @include mobile{
+        display: flex;
         flex-direction: column
     }
 
@@ -33,6 +40,14 @@
     &__nietszche{
         @extend %author-background-image;
         background-image: url("./img/nietzche.jpg");
+        
+        @include tablet{
+            background-position: bottom;
+        }
+        
+        @include mobile{
+            background-position: bottom;
+        }
     }
 
     &__reneDescartes{

@@ -21,6 +21,10 @@
         gap: 20px;
         font-size: 1.65em;
     }
+
+    @include iTablet{
+        font-size: 1.45em;
+    }
     
     @include tablet{
         padding: 15px 0px;

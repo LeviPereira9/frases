@@ -11,14 +11,21 @@
 }
 
 
-@mixin desktop {
-    @media (min-width: 1920px) {
+@mixin iTablet{
+    @media (max-width: 860px) {
         @content;
     }
 }
 
+
 @mixin tableTop{
     @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1920px) {
         @content;
     }
 }
