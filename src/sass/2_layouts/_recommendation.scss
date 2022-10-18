@@ -247,13 +247,13 @@
             }
             
             @include iTablet{
-                width: 30em;
+                width: 90%;
                 font-size: 1.3em;
                 
             }
 
             @include tablet{
-                width: 20em;
+                width: 90%;
             }
             
             @include mobile{
