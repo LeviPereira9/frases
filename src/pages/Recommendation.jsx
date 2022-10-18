@@ -40,7 +40,7 @@ const Recommendation = () => {
                     </label>
                     <label className="recommendation__form__email" >
                         <span>E-mail:</span>
-                        <input type="email" placeholder="joaoManuel@grandesmentes.com" disabled />
+                        <input type="email" placeholder="joaoManuel@gmail.com" disabled />
                     </label>
                     <fieldset className="recommendation__form__authors" >
                         <legend> Escolha o Pensador </legend>
@@ -67,8 +67,7 @@ const Recommendation = () => {
                             </label>
                         </div>
                     </fieldset>
-                    {!voted && <button className="recommendation__form__buttonActived" >Enviar</button> }
-                    {voted && <button className="recommendation__form__buttonDesactived" disabled >Enviado</button> }
+                    <button className="recommendation__form__buttonActived" >Enviar</button>
                 </form>
             </>
          }

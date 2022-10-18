@@ -24,6 +24,10 @@
             width: 900px;
         }
         
+        @include iTablet{
+            width: 25em;
+        }
+        
         @include tablet{
             width: 540px;
             font-size: 1.65em;

@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 800px;
+    height: 55em;
     padding-top: 25px;
     background-color: variables.$secondary-bgColor;
     color: variables.$primary-bgColor;
@@ -17,22 +17,29 @@
         gap: 35px;
         background-color: variables.$secondary-color;
         border: 1px solid black;
-        width: 700px;
-        height: 620px;
+        width: 43em;
+        height: 39em;
         border-radius: 25px;
         
+        
         @include tablet{
-            width: 550px;
+            width: 34em;
+            font-size: .95em;
         }
         
         @include mobile{
-            width: 380px;
-            align-items: flex-start;
+            width: 26em;
+            height: 40em;
+            font-size: .9em;
         }
         
         &__title{
             text-align: center;
             padding-top: 15px;
+
+            @include tablet{
+                margin-left: 15px;
+            }
         }
 
         label{
@@ -41,11 +48,9 @@
 
             @include tablet{
                 font-size: 1.3em;
-            }
-            
-            @include mobile{
                 padding-left: 15px;
             }
+            
         }
         
         input[type=email]{
@@ -58,26 +63,22 @@
         }
 
         input[type=text], input[type=email]{
-            width: 500px;
+            width: 22em;
             height: 30px;
-            margin-left: 10px;
-            margin-top: 15px;
             border: none;
+            margin: 0 12px;
+            padding-bottom: 5px;
             border-bottom: 1px solid black;
             font-size: 1.2em;
-            padding-left: 10px;
-            padding-bottom: 5px;
             background-color: transparent;
 
+            
             @include tablet{
-                width: 420px;
+                width: 17em;
             }
             
             @include mobile{
-                width: 250px;
-                padding-left: 5px;
-                margin-left: 5px;
-                font-size: 1em;
+                width: 12em;
             }
             
             &:focus{
@@ -92,30 +93,35 @@
         }
 
         &__authors{
-            width: 585px;
-            height: 225px;
+            width: 37em;
+            height: 15em;
+
 
             @include tablet{
-                width: 510px;
-
+                width: 31em;
+                margin-left: 15px;
+                
                 label{
+                    margin-left: -20px;
                     font-size: 1.2em;
                 }
             }
             
             @include mobile{
-                width: 320px;
-                text-align: start;
+                width: 23em;
+                height: 15em;
                 margin-left: 15px;
 
                 label{
                     margin-left: -20px;
+                    font-size: 1.3em;
                 }
             }
             
             legend{
                 font-weight: bold;
                 font-size: 1.2em;
+
                 
                 @include tablet{
                     font-size: 1.3em;
@@ -127,6 +133,10 @@
                 flex-direction: column;
                 gap: 10px;
                 margin: 5px 15px;
+
+                @include mobile{
+                    font-size: 1em;
+                }
 
                 span{
                     margin-left: 10px;
@@ -144,28 +154,6 @@
             }
         }
 
-        &__buttonDesactived{
-            @extend %primary-button;
-            background-color: lightgreen;
-            color: darkgreen;
-            border-color: darkgreen;
-            cursor: not-allowed;
-
-            @include mobile{
-                margin: auto;
-            }
-
-            &:hover{
-                background-color: darkgreen;
-                color: lightgreen;
-                border-color: lightgreen;
-            }
-
-        }
-
-
-
-        
     }
 
     &__voted{
@@ -178,12 +166,37 @@
             background-color: #EEFAFC;
             text-align: center;
             font-weight: bold;
-            font-size: 1.2em;
+            font-size: 1.5em;
             line-height: 2em;
             border: 1px solid black;
             border-radius: 10px;
-            width: 450px;
+            width: 30em;
             padding: 15px 25px;
+
+            p{
+                margin-bottom: 20px;
+            }
+
+            @include tableTop{
+                width: 30em;
+                font-size: 1.5em;
+
+            }
+            
+            @include iTablet{
+                width: 30em;
+                font-size: 1.3em;
+                
+            }
+
+            @include tablet{
+                width: 20em;
+            }
+            
+            @include mobile{
+                width: 13em;
+
+            }
         }
 
         &__change{

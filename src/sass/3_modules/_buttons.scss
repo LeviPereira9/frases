@@ -22,13 +22,23 @@
             font-size: 2em;
         }
 
+        
         @include tableTop{
-            width: 150px;
-            font-size: 1em;
+            font-size: 1.2em;
+            width: 10em;
+            padding: 15px 0;
+        }
+        
+        @include iTablet{
+            font-size: 1.2em;
+            width: 13em;
+            padding: 15px 0;
         }
         
         @include mobile{
-            font-size: 1em;
+            font-size: 1.2em;
+            width: 13em;
+            padding: 15px 0;
         }
 
         &:hover{
