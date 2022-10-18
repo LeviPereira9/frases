@@ -8,23 +8,21 @@
     color: variables.$primary-bgColor;
 
     &__container{
-        width: 980px;
-        margin: 50px 0;
+        width: 90%;
+        margin: 25px 0 45px 0;
         font-size: 1.2em;
         
         @include tableTop{
-            width: 900px;
             margin-top: 10px;
         }
+
         
         @include tablet{
-            width: 530px;
             margin-top: 15px;
             font-size: 1.1em;
         }
         
         @include mobile{
-            width: 350px;
             font-size: 1.05em;
             margin-top: 35px;
         }

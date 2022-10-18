@@ -32,13 +32,13 @@ const Navbar = () => {
                     <li> <Link to="/recommendation"> Indicação </Link> </li>
                 </ul>
             </div>
-                <div className='header__brand'>
-                    <p>Grandes</p>
-                    <Link to="/" >
+                <div >
+                    <Link to="/" className='header__brand'>
+                        <p>Grandes</p>
                         <FaBrain
                             className='header__brand__icon'/>
+                        <p>Mentes</p>
                     </Link>
-                    <p>Mentes</p>
                 </div>
             <div className="header__container">
                 <ul className='header__nav' >

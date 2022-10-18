@@ -18,18 +18,22 @@
         background-color: variables.$secondary-color;
         border: 1px solid black;
         width: 43em;
-        height: 39em;
+        height: 40em;
         border-radius: 25px;
         
+        @include iTablet{
+            width: 85%;
+        }
         
         @include tablet{
-            width: 34em;
+            width: 98%;
+            height: 45em;
             font-size: .95em;
         }
         
         @include mobile{
             width: 26em;
-            height: 40em;
+            height: 45em;
             font-size: .9em;
         }
         
@@ -52,54 +56,113 @@
             }
             
         }
-        
-        input[type=email]{
-            cursor: not-allowed;
 
-            &:disabled{
-                background-color: transparent;
+        &__name{
+            width: 100%;
+            height: 10%;
+            margin-left: 10%;
+            
+
+            @include tablet{
+                width: 90%;
+                margin-left: 2%;
             }
 
-        }
-
-        input[type=text], input[type=email]{
-            width: 22em;
-            height: 30px;
-            border: none;
-            margin: 0 12px;
-            padding-bottom: 5px;
-            border-bottom: 1px solid black;
-            font-size: 1.2em;
-            background-color: transparent;
-
+            @include mobile{
+                margin-left: -5%;
+            }
             
+
+            input{
+                width: 75%;
+                border: none;
+                margin: 0 12px;
+                padding-left: 10px;
+                padding-bottom: 5px;
+                border-bottom: 1px solid black;
+                font-size: 1.2em;
+                background-color: transparent;
+                margin-left: 2%;
+
+                @include mobile{
+                    width: 73%;
+                    margin-left: 1%;
+                    padding-left: 5px;
+                }
+
+                &:focus{
+                    outline: none;
+                }
+                
+                &::placeholder{
+                    color: #363636;
+                    font-style: italic;
+                    padding-left: 5px;
+                }
+                
+            }
+            
+        }
+        
+        
+        &__email{
+            width: 100%;
+            height: 10%;
+            margin-left: 10%;
+
             @include tablet{
-                width: 17em;
+                width: 90%;
+                margin-left: 2%;
             }
             
             @include mobile{
-                width: 12em;
+                margin-left: -5%;
             }
             
-            &:focus{
-                outline: none;
-            }
-            
-            &::placeholder{
-                color: #363636;
-                font-style: italic;
-                padding-left: 5px;
+            input{
+                width: 75%;
+                border: none;
+                margin: 0 12px;
+                padding-left: 10px;
+                padding-bottom: 5px;
+                border-bottom: 1px solid black;
+                font-size: 1.2em;
+                background-color: transparent;
+                margin-left: 2%;
+                cursor: not-allowed;
+
+                @include mobile{
+                    width: 73%;
+                    margin-left: 1%;
+                    padding-left: 5px;
+                }
+    
+                &:disabled{
+                    background-color: transparent;
+                }
+    
+
+                &:focus{
+                    outline: none;
+                }
+                
+                &::placeholder{
+                    color: #363636;
+                    font-style: italic;
+                    padding-left: 5px;
+                }
+                
             }
         }
 
         &__authors{
-            width: 37em;
+            width: 90%;
             height: 15em;
 
 
             @include tablet{
-                width: 31em;
-                margin-left: 15px;
+                width: 90%;
+                margin-left: 5px;
                 
                 label{
                     margin-left: -20px;
