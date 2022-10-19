@@ -30,17 +30,17 @@
     
     &__maquiavel {
         @extend %author-background-image;
-        background-image: url("./img/maquiavel.jpg");
+        background-image: url("/img/maquiavel.jpg");
     }
 
     &__tesla {
         @extend %author-background-image;
-        background-image: url("./img/Tesla_Sarony.jpg");
+        background-image: url("/img/Tesla_Sarony.jpg");
     }
 
     &__nietszche{
         @extend %author-background-image;
-        background-image: url("./img/nietzche.jpg");
+        background-image: url("/img/nietzche.jpg");
         
         @include tablet{
             background-position: bottom;
@@ -53,6 +53,6 @@
 
     &__reneDescartes{
         @extend %author-background-image;
-        background-image: url("./img/Rene_Descartes.jpg");
+        background-image: url("/img/Rene_Descartes.jpg");
     }
 }
