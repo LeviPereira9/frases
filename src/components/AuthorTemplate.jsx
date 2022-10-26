@@ -3,28 +3,23 @@ import { useFetchPhrases } from "../hooks/useFetchPhrases";
 
 const AuthorTemplate = ({authorName, authorSearch,text1, text2, backgroundImage, perfilImage}) => {
     const author = authorName.replace(" ", "+");
-
+    
     const { data, loading, error } = useFetchPhrases(author);
     const [phrases, setPhrases] = useState(null);
     const [randomNumber, setRandomNumber] = useState(0)
 
      useEffect(()=>{
+       if(data){
+            setPhrases(data.frases.filter((infos)=>
+            infos.autor.includes(authorSearch) && infos.texto.length < 501
+            ))
+       }
+    },[data]);
 
-        if( data === null ){
-            return;
-        } else {
-            setPhrases(data.frases);
-            if(phrases === null){
-                return;
-            } else {
-                console.log(phrases)
-            }
-        };
-        
-    },[data])
+    
     
     const handleRandomText = ()=>{
-        setRandomNumber(Math.round(Math.random()*49))
+        setRandomNumber(Math.round(Math.random()*phrases.length - 1));
     }
     
   return (
@@ -46,11 +41,7 @@ const AuthorTemplate = ({authorName, authorSearch,text1, text2, backgroundImage,
                         <p>Carregando...</p>
                     ) : (
                         <>
-                        {/* Novo */}
-                        { phrases != null && phrases[randomNumber].autor != authorSearch && handleRandomText() }
-                        { phrases != null && phrases[randomNumber].autor === authorSearch && phrases[randomNumber].texto.length < 501  && <p>"{phrases[randomNumber].texto}"</p> }
-                        { phrases != null && phrases[randomNumber].autor === authorSearch && phrases[randomNumber].texto.length > 501 && handleRandomText() }
-                        
+                            {phrases && <p>"{phrases[randomNumber].texto}"</p> }
                         </>
                     )}
                 </div>

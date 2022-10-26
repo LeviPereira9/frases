@@ -18,12 +18,14 @@ import Maquiavel from "./pages/authors/Maquiavel"
 import Tesla from "./pages/authors/Tesla"
 import Nietszche from './pages/authors/Nietzche';
 import ReneDescartes from './pages/authors/ReneDescartes';
+import ScrollToTop from './components/ScrollToTop';
 
 
 const App = () => {
   return (
     <div>
       <BrowserRouter>
+        <ScrollToTop/>
         <Navbar/>
         <Routes>
           <Route path="/" element={<Home/>} ></Route>
