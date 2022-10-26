@@ -13,15 +13,17 @@ const AuthorTemplate = ({authorName, authorSearch,text1, text2, backgroundImage,
             setPhrases(data.frases.filter((infos)=>
             infos.autor.includes(authorSearch) && infos.texto.length < 501
             ))
+            console.log(phrases)
        }
     },[data]);
 
     
     
     const handleRandomText = ()=>{
-        setRandomNumber(Math.round(Math.random()*phrases.length - 1));
+        setRandomNumber(Math.ceil(Math.random()*phrases.length - 1));
     }
     
+    console.log(randomNumber)
   return (
 
     <>
