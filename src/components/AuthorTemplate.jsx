@@ -13,7 +13,6 @@ const AuthorTemplate = ({authorName, authorSearch,text1, text2, backgroundImage,
             setPhrases(data.frases.filter((infos)=>
             infos.autor.includes(authorSearch) && infos.texto.length < 501
             ))
-            console.log(phrases)
        }
     },[data]);
 
@@ -23,7 +22,6 @@ const AuthorTemplate = ({authorName, authorSearch,text1, text2, backgroundImage,
         setRandomNumber(Math.ceil(Math.random()*phrases.length - 1));
     }
     
-    console.log(randomNumber)
   return (
 
     <>
