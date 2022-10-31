@@ -167,6 +167,15 @@
                 
             }
 
+
+            @include miniMobile{
+                margin-top: 50px;
+                font-size: .9em;
+
+                p{
+                    margin: 5px 0;
+                }
+            }
         }
     }
 
@@ -217,6 +226,10 @@
             @include mobile{
                 font-size: 1.5em;
             }
+
+            @include miniMobile{
+                font-size: 1.35em;
+            }
         }
         
         &__text{
@@ -252,6 +265,11 @@
                 font-size: 1.4em;
                 line-height: 1.65em;
             }
+
+            @include miniMobile{
+                font-size: 1em;
+                line-height: 1.85em;
+            }
         }
 
         &__authorName{
@@ -277,6 +295,10 @@
 
             button {
                 @extend %primary-button;
+
+                @include miniMobile{
+                    font-size: 1em;
+                }
             }
         }
     }

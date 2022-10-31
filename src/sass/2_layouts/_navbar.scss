@@ -76,6 +76,10 @@
         @include mobile{
             font-size: 1em;
         }
+
+        @include miniMobile{
+            font-size: .9em;
+        }
         
         &__icon{
             font-size: 1.5em;
@@ -119,6 +123,11 @@
             @include mobile{
                 display: block;
             }
+
+            @include miniMobile{
+                display: block;
+                font-size: 1.3em;
+            }
         }
 
     }
@@ -149,6 +158,7 @@
         @include mobile{
             font-size: 1.25em;
         }
+
         
         a{
             color: white;

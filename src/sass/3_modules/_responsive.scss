@@ -1,3 +1,9 @@
+@mixin miniMobile{
+    @media (max-width: 360px) {
+        @content;
+    }
+}
+
 @mixin mobile {
     @media (max-width: 425px) {
         @content;
